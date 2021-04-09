@@ -1,0 +1,2 @@
+cloud_filtering:sampleROS
+-DCATKIN_DEVEL_PREFIX=/home/dylan/Desktop/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/dylan/Desktop/catkin_ws/install -G Unix Makefiles

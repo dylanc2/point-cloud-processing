@@ -1,0 +1,2 @@
+set(point_cloud_processing_MESSAGE_FILES "/home/dylan/Desktop/catkin_ws/src/point_cloud_processing/msg/Float64MultiArrayStamped.msg;/home/dylan/Desktop/catkin_ws/src/point_cloud_processing/msg/PrincipalComponentStamped.msg;/home/dylan/Desktop/catkin_ws/src/point_cloud_processing/msg/ContactStateEstimationStamped.msg")
+set(point_cloud_processing_SERVICE_FILES "")
