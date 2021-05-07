@@ -202,7 +202,7 @@ void cloud_cb(const PointCloud::ConstPtr &cloud_msg)
 	computeCovarianceMatrixNormalized(*deformed_cloud, pcaCentroid, covariance);
 	Eigen::SelfAdjointEigenSolver<Eigen::Matrix3f> eigen_solver(covariance, Eigen::ComputeEigenvectors);
 	Eigen::Matrix3f eigenVectorsPCA = eigen_solver.eigenvectors();
-	eigenVectorsPCA.col(2) = eigenVectorsPCA.col(0).cross(eigenVectorsPCA.col(1)); /// This line is necessary for proper orientation in some cases. The numbers come out the same without it, but
+	eigenVectorsPCA.col(2) = eigenVectorsPCA.col(0).cross(eigenVectorsPCA.col(1));
 
 	Eigen::Vector3f e1, e2, e3, evals;
 	e1 = eigenVectorsPCA.col(0);
@@ -231,7 +231,7 @@ void cloud_cb(const PointCloud::ConstPtr &cloud_msg)
 	viewer->updatePointCloud(centroid_cloud, "centroid");
 	viewer->updatePointCloud(deformed_cloud, "deformed");
 
-	float k = 100; // scale vectors to make them visible on viewer
+	float k = 100; // Scale vectors to make them visible on viewer
 	pcl::PointXYZ p1, p2, p3;
 	p1.x = centroid.x + 2.5 * k * evals(0) * e1(0);
 	p1.y = centroid.y + 2.5 * k * evals(0) * e1(1);
