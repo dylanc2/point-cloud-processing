@@ -28,7 +28,7 @@ rostopic echo <topic_name>
 
 ## Visualization
 
-Point cloud visualization and demonstration of the contact_state_estimation topic. Position given as an vector of x, y, z values describing the centroid of the deformed contact area. Orientation is given as the first principal component vector of the deformed area.
+Point cloud visualization and demonstration of the 'contact_state_estimation' topic. Position given as an vector of x, y, z values describing the centroid of the deformed contact area. Orientation is given as the first principal component vector of the deformed area.
 
 <img src="./media/contact.gif" width="600"/>
 
